@@ -29,7 +29,7 @@ function costCalculation() {
     const subTotal = totalFirstClassNumber * 150 + totalEconomyNumber * 100;
     document.getElementById("subtotal").innerText = "$" + subTotal;
 
-    const tax = subTotal * .1;
+    const tax = Math.round(subTotal * .1);
     document.getElementById("tax").innerText = "$" + tax;
 
     grandTotal = subTotal + tax;
