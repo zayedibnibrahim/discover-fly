@@ -13,6 +13,7 @@ function counterHandler(id, increasingOrNot) {
     //calculation
     costCalculation();
 }
+var grandTotal;
 function costCalculation() {
     const totalFirstClassNumber = inputHandler("firstclass-count");
     const totalEconomyNumber = inputHandler("economy-count");
@@ -23,9 +24,13 @@ function costCalculation() {
     const tax = subTotal * .1;
     document.getElementById("tax").innerText = "$" + tax;
 
-    const grandTotal = subTotal + tax;
+    grandTotal = subTotal + tax;
     document.getElementById("total").innerText = "$" + grandTotal;
+}
 
+//modal
+function showModal(){
+    document.getElementById("pop-total").innerText =  "$" + grandTotal;
 }
 //parsing input value
 function inputHandler(id) {
