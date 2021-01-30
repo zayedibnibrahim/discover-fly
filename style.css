@@ -62,15 +62,16 @@ nav ul li a:hover, a.active{
     justify-content: space-between;
     align-items: center;
 }
-.inp-width{
+/* .inp-width{
     min-width: 300px;
-}
+} */
 .plus-minus-btn{
     color: #3352F2;
     font-size: 30px;
     padding: 2px;
     margin-top: 10px;
     word-spacing: 20px;
+    margin-bottom: 10px;
 }
 .booking-form  .calculations{
     margin: 10px 0;
