@@ -1,8 +1,10 @@
 function counterHandler(id, increasingOrNot) {
-    const blankFirstClass = document.getElementById(id + "-count").value;
-    if (blankFirstClass == "" || blankFirstClass < 0) {
+    //Validation start
+    const blankInput = document.getElementById(id + "-count").value;
+    if (blankInput == "" || blankInput < 0) {
         document.getElementById(id + "-count").value = 0;
     }
+    //validation End
 
     const seatCountInput = document.getElementById(id + "-count");
     const seatCountNumber = parseInt(seatCountInput.value);
