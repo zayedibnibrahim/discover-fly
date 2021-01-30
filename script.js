@@ -1,4 +1,9 @@
 function counterHandler(id, increasingOrNot) {
+    const blankFirstClass = document.getElementById(id + "-count").value;
+    if (blankFirstClass == "" || blankFirstClass < 0) {
+        document.getElementById(id + "-count").value = 0;
+    }
+
     const seatCountInput = document.getElementById(id + "-count");
     const seatCountNumber = parseInt(seatCountInput.value);
     let seatCount = seatCountNumber;
