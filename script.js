@@ -10,9 +10,10 @@ function counterHandler(id, increasingOrNot) {
     }
     seatCountInput.value = seatCount;
 
-    //calculation
     costCalculation();
 }
+
+//calculation
 var grandTotal;
 function costCalculation() {
     const totalFirstClassNumber = inputHandler("firstclass-count");
@@ -28,13 +29,25 @@ function costCalculation() {
     document.getElementById("total").innerText = "$" + grandTotal;
 }
 
-//modal
-function showModal(){
-    document.getElementById("pop-total").innerText =  "$" + grandTotal;
-}
 //parsing input value
 function inputHandler(id) {
     const formInput = document.getElementById(id);
     const inputNumber = parseInt(formInput.value);
     return inputNumber;
+}
+
+//modal
+function showModal() {
+    document.getElementById("pop-total").innerText = "$" + grandTotal;
+
+    resetInput("firstclass-count", "economy-count", "subtotal", "tax", "total");
+}
+
+//reset input
+function resetInput(id, id1, id2, id3, id4) {
+    document.getElementById(id).value = 0;
+    document.getElementById(id1).value = 0;
+    document.getElementById(id2).innerText = "$0";
+    document.getElementById(id3).innerText = "$0";
+    document.getElementById(id4).innerText = "$0";
 }
